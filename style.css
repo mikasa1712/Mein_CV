@@ -1,2 +1,37 @@
-.container { display: flex; border-radius: 50px; background-color: black; }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
+.container{
+    display: flex;
+    background: white;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+}
+
+.image-section img{
+    width: 100%;
+    max-width: 400%;
+    height: auto;
+}
+
+.content-section{
+    padding: 50px;
+}
+
+.btn{
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50px;    
+}
