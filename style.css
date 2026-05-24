@@ -24,7 +24,7 @@ body {
 
 .image-section img{
     width: 100%;
-    max-width: 400%;
+    height: auto;
     object-fit: cover;
     display: block;
 }
@@ -110,19 +110,5 @@ p {
         flex-direction: column;
         max-width: 100%;
         margin: 10px;
-    }
-
-    .image-section img {
-        max-width: 100%;
-    }
-
-    .social-icons{
-        justify-content: center;
-        margin-bottom: 30px;
-    }
-
-    .content-section{
-        padding: 30px 20px;
-        text-align: center;
     }
 }
