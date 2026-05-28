@@ -6,57 +6,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mein CV</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 
 </head>
 
-<body>    
-    <div class="container">
-        <div class="image-section">
+<body>
+    <div id="login-screen" style="text-align: center; max-width: 400px; margin: 100px auto; padding: 30px; border: 1px solid #222; border-radius: 8px; background: #fff;">
+        <div style="margin-bottom: 20px;">
+            <img src="./Images/Foto_Boog_Fabienne.jpeg" alt="Bewerbungsfoto von Fabienne" 
+                    style="width: 130px; height: 130px; object-fit: cover; object-position: center 15%; border-radius: 50%; border: 2px solid #222; 
+                    image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
+        </div>
+        <h1>Fabienne Boog</h1>
+        <p>Bitte gib das Passwort ein, um das CV freizuschalten:</p>
+        <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
+            <input type="password" id="passwordInput" placeholder="Passwort" style="padding: 10px; border-radius: 50px; border: 1px solid #ccc; text-align: center;">
+            <button id="submitLoginBtn" style="padding: 10px; border-radius: 50px; background: #222; color: #fff; cursor: pointer; font-weight: bold;">🔑 Freischalten</button>
+        </div>
+        <p id="loginError" style="color: red; margin-top: 10px; display: none;">❌ Falsches Passwort!</p>
+    </div>   
+                 
+<main class="container" id="cv-content" style="display: none;">
+    <header class="profile-header">
+        <div class="profile-image-box">
             <img src="./Images/Foto_Boog_Fabienne.jpeg" alt="Bewerbungsfoto von Fabienne">
+        </div>
+        
+        <div class="profile-info-box">
+            <h1>Fabienne Boog</h1>
+            <h2>Angehende Informatikerin mit medizinischem Hintergrund</h2>
             
-            <div class="social-icons">
-                <a href="#" target="_blank">🎧</a>
-                <a href="#" target="_blank">🌐</a>
-                <a href="#" target="_blank">📸</a>
-                <a href="#" target="_blank">🎧</a>
+            <div class="contact-grid">
+                <p><strong>Adresse:</strong> Benedikt Hugi-Strasse 31, 4500 Solothurn</p>
+                <p><strong>Telefon:</strong> 079 799 38 13</p>
+                <p><strong>E-Mail:</strong> fabienne.boog@gmail.com</p>
+                <p><strong>Geburtsdatum:</strong> 17.12.1997</p>
             </div>
         </div>
+    </header>
 
-        <div class="content-section">
-            <h1>Hallo,</h1>
-            <h2>schön, dass du da bist.</h2>
-            <h3>Ich bin Fabienne</h3>
-            <p>Angehende Informatikerin an der hftm mit medizinischem Hintergrund.<br>
-            Hier findest du Infos zu meiner Person sowie meinen Lebenslauf.
-            </p>
+    <hr class="separator">
 
-            <div class="cv-details">
-                <h3>Ausbildung</h3>
-                <ul>
-                    <li><strong>2024 - Heute:</strong> Studium Informatik HF, hftm Solothurn</li>
-                    <li><strong>Vorherige Ausbildung:</strong> Deine Schule / Lehre hier eintragen</li>
-                </ul>
+    <div class="content-section">
+        <section class="cv-category">
+            <h3>Ausbildung</h3>
+            <ul class="cv-timeline">
+                <li>
+                    <span class="date">04.2025 - heute</span>
+                    <div class="details-box">
+                        <strong>Studium Informatik (berufsbegleitend)</strong>
+                        <span class="institution">HF für Technik Mittelland, Grenchen/Biel</span> 
+                    </div>
+                </li>
+                <li>
+                    <span class="date">01.2025 - 04.2025</span> 
+                    <div class="details-box">
+                        <strong>Vorkurs Informatik</strong> 
+                        <span class="institution">HF für Technik Mittelland, Grenchen</span> 
+                    </div>
+                </li>
+                <li>
+                    <span class="date">08.2023 - 01.2024</span> 
+                    <div class="details-box">
+                        <strong>Weiterbildung Sprechstundenassistenz</strong> 
+                        <span class="institution">Feusi Bildungszentrum, Solothurn</span> 
+                    </div>
+                </li>
+                <li>
+                    <span class="date">01.2022 - 03.2022</span> 
+                    <div class="details-box">
+                        <strong>Sprachaufenthalt</strong>
+                        <span class="institution">Centre of English Studies, Edinburgh</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="date">01.2021 - 06.2021</span>
+                    <div class="details-box">
+                        <strong>Ausbildung Arzt- und Spitalsekretärin</strong>
+                        <span class="institution">Bénédict Schule, Bern</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="date">08.2014 - 07.2018</span>
+                    <div class="details-box">
+                        <strong>Ausbildung Drogistin EFZ</strong>
+                        <span class="institution">Berufsfachschule GIBS, Solothurn</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="cv-category">
+            <h3>Berufserfahrung</h3>
+            <ul class="cv-timeline">
+                <li>
+                    <span class="date">05.2026 - heute</span>
+                    <div class="details-box">
+                        <strong>Anstellung als IT-Supporterin + Sachbearbeiterin Zentrale Dienste</strong>
+                        <span class="institution">Regiomech Zuchwil</span>
+                        <p class="description">
+                            • First-Level-Support für Netzwerk, Clients & Telefonsystem
+                            <br>• IT-Arbeitsplätze einrichten, warten & Benutzer*innen unterstützen
+                            <br>• Einfache Anleitungen erstellen & Schulungen durchführen
+                            <br>• IT-Projekte koordinieren
+                            <br>• Webseite & Social-Media-Kanäle betreuen
+                            <br>• Administrative Aufgaben in unseren Integrationsprogrammen
+                        </p>
+                </li>
+                <li>
+                    <span class="date">04.2022 - 02.2026</span>
+                    <div class="details-box">
+                        <strong>Anstellungen als Arztsekretärin</strong>
+                        <span class="institution">Bürgerspital Solothurn</span>
+                        <p class="description">•Leitung Sekretariatsabteilung der Ernährungsberatung<br>•Sicherstellung der Informationsflüsse<br> 
+                            •Neuaufnahme/Datenänderungen im SAP<br>
+                        <span class="institution">Kantonsspital Aarau</span>
+                        <p class="description">•Schnittstelle zwischen Patienten, Ärzten und externen Partnern<br>•Sprechstundenorganisation<br>
+                            •Entgegennahme sämtlicher Telefonate.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="date">08.2018 - 11.2021</span>
+                    <div class="details-box">
+                        <strong>Anstellungen als Drogistin</strong>
+                        <span class="institution">Müller Drogerie, Bern</span>
+                        <p class="description">•Stv. Pharmaabteilung<br>•Fachkompetente Beratungen<br></p>
+                            
+                        <span class="institution">Drogerie Bühlmann, Sarnen</span>
+                        <p class="description">•Hauptverantwortung Pharmaabteilung und Bestellwesen<br>•Sicherstellung der Qualitätssicherung.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-                <h3>Berufserfahrung</h3>
-                <ul>
-                    <li><strong>Jahr - Jahr:</strong> Deine Position, Firma</li>
-                    <li><strong>Jahr - Jahr:</strong> Deine Position, Firma</li>
-                </ul>
+        <section class="cv-category extra-info">
+            <details>
+                <summary><strong>Weitere Aktivitäten</strong></summary>
+                <p><strong>09.2022 - heute:</strong> Vorstandsmitglied Potterheads</p>
+                <p style="margin-top: 5px; padding-left: 10px; color: #666;">• Leitung Lektorat<br>• Mitorganisation und Standbetreuung bei diversen Messen<br>• Organisation Vereinsaktivitäten</p>
+            </details>
 
-                <h3>Projekte & Skills</h3>
-                <p>Hier kannst du beschreiben, was du im Studium oder privat schon programmiert hast.</p>
-            </div>
+            <details>
+                <summary><strong>Sprachkenntnisse</strong></summary>
+                <p><strong>Deutsch:</strong> Muttersprache<br><strong>Englisch:</strong> Niveau C2<br><strong>Französisch:</strong> Niveau A2</p>
+            </details>
 
-            <div class="button-box">
-                <a href="#login-bereich" class="btn">Zum geschützten Bereich</a>
-                <a href="mailto:fabienne.boog@gmail.com" class="btn">Kontakt per Mail</a>
-            </div>
-        </div>
-    </div>  
+            <details>
+                <summary><strong>Freizeit & Interessen</strong></summary>
+                <p>Lesen, Freunde treffen, Fitness/Crossfit, mit meiner Hündin trainieren</p>
+            </details>
+        </section>
 
-
-    <script src="script.js"></script>
-</body>
+        <footer class="cv-actions">
+            <a href="mailto:fabienne.boog@gmail.com" class="btn">📧 Kontakt per E-Mail</a>
+        </footer>
+    </div>
+</main>
 
 
 
